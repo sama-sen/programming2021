@@ -5,7 +5,7 @@ public class Pr11 {
 		int n = IBIO.inputInt("time? ");
 		for(int i = 0; i < n; i++)
 		{
-			IBIO.output("Thiago");
+			IBIO.output("My name :)");
 		}
 	}
 }
