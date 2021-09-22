@@ -18,7 +18,13 @@ public class Example4
 		{
 			IBIO.out( i + " " );
 		}
-		IBIO.output("*** BOOM ***");
+		IBIO.output(""); // goes down one line
+		for(int i = 1; i < 20; i = i + 2)
+		{
+			IBIO.out( i + " " );
+		}
+		
+		IBIO.output("\n*** BOOM ***");
 		IBIO.output("OUCH");
 	}
 }
