@@ -5,7 +5,7 @@ public class Example1
 		int x = 16;
 		String name = IBIO.input("Name? ");
 		IBIO.output("the number was" + x);
-		IBIO.output(x + " was the number");
+		IBIO.output(x + " was the number");	
 		IBIO.output(x + " was " + name + "'s age");
 	}
 }

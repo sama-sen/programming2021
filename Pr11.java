@@ -1,11 +1,15 @@
 
-public class Pr11 {
+public class Pr11
+{
 	
-	public static void main (String[] args) {
+	public static void main (String[] args)
+	{
 		int n = IBIO.inputInt("time? ");
-		for(int i = 0; i < n; i++)
+		String nickname = IBIO.input("Nickname: ");
+		for(int i = 0; i < n; i++) // i++ means i = i+1
 		{
-			IBIO.output("My name :)");
+			IBIO.out( i + "\t: My name :)\t" + nickname);
+			IBIO.output( "\t i<n? " + (i<n) );
 		}
 	}
 }
