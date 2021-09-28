@@ -1,5 +1,5 @@
 // slightly modified and expanded
-public class Pr11
+public class Pr1_1
 {
 	
 	public static void main (String[] args)
