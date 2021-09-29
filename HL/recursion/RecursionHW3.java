@@ -1,5 +1,5 @@
 
-public class RecursionHW
+public class RecursionHW3
 {
 	
 	public static int mystery(int n, int a, int d)
