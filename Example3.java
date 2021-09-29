@@ -15,8 +15,11 @@ public class Example3
 		int a = IBIO.inputInt("Enter a number: ");
 		int b = IBIO.inputInt("Enter another number: ");
 		int c = a * b;
-		IBIO.output("The product of " + a + " and " + b + " is " + c);
-		
+		IBIO.out("The product of " + a);	// same line
+		IBIO.out(" and " + b);				// same line
+		IBIO.output(" is " + c);		// same line, goes next line
+		IBIO.output("the end.");
+		IBIO.output("Why are you still here?");
 	}
 }
 
