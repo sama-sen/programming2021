@@ -45,9 +45,8 @@ public class Q1MockTestAns1
 				System.exit(0); // exit the program
 			}
 		}
-		if(i == max)
-		{	IBIO.output(max + " is a prime");
-		}
+		// this runs only if the for loop above does not find a divisor of max (between 2 and max-1)
+		IBIO.output(max + " is a prime");
 		
 	}
 }
