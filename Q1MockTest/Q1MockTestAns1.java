@@ -10,7 +10,7 @@ public class Q1MockTestAns1
 		int howMany = IBIO.inputInt("How many numbers to process? ");
 		if(howMany < 3)
 		{	IBIO.output("Input error");
-			System.exit(1);
+			System.exit(1); // stop the program; exit
 		}
 
 		for(int i = 0; i < howMany; i++) // repeat <howMany> times
@@ -29,9 +29,10 @@ public class Q1MockTestAns1
 			{	max = number;
 			}
 			// and then some more code...
+			//IBIO.output("This repeats");
 		}
 		// output of results: outside the for loop, we need them output only once
-		
+		//IBIO.output("This does not repeat");
 		IBIO.output( "Minimum = " + min );
 		IBIO.output( "Maximum = " + max );
 		IBIO.output( "Range   = " + (max-min) );

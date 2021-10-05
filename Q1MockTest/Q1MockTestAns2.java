@@ -36,6 +36,7 @@ public class Q1MockTestAns2 // more complex answ3er
 			IBIO.output( "Maximum = " + max );
 			IBIO.output( "Range   = " + (max-min) );
 			IBIO.output( "Average = " + (sum/howMany) );
+			
 			int i; // this makes it possible to use I after the loop is over
 			for( i = 2; i < max; i++) // checks whether the numbers 2..(max-1) are divisors of max
 			{
@@ -48,7 +49,7 @@ public class Q1MockTestAns2 // more complex answ3er
 			{	IBIO.output(max + " is a prime");
 			}
 		}
-		IBIO.output("[End]"); // outside the loop, happens only once at the end of the program
+		//IBIO.output("[End]");
 	}
 }
 
