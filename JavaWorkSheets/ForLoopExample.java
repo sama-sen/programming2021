@@ -18,6 +18,19 @@ public class ForLoopExample
 		}
 		IBIO.output("\nEND");
 		
+		IBIO.out("Counting up in steps of 3: ");
+		for(int i = 0; i < 20; i = i + 3)
+		{
+			IBIO.out(i + " ");
+		}
+		IBIO.output("\nEND");
+		
+		IBIO.out("Counting up in steps of 3: ");
+		for(int i = 20; i > 0; i = i - 3)
+		{
+			IBIO.out(i + " ");
+		}
+		IBIO.output("\nEND");
 	}
 }
 
