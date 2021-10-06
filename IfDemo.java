@@ -1,6 +1,7 @@
 public class IfDemo
 {
-	
+	// [ <= >= correct ]		[ => =< incorrect ]
+	// opposite of > : <=	opposite of < : >=		opposite of == : !=
 	public static void main (String[] args)
 	{
 		int n = IBIO.inputInt("Enter a number: ");
