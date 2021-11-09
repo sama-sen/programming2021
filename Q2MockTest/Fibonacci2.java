@@ -12,7 +12,7 @@ public class Fibonacci2
 			long first  = 0;
 			long second = 1;
 			long term = first + second;
-			double average = first + second + term;
+			double average = term;
 			do
 			{	maxTerm = IBIO.inputInt("Calculate up to which term of the Fibonacci sequence? ");
 				if(maxTerm < 0)
