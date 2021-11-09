@@ -9,6 +9,7 @@ public class Fibonacci
 		long second = 1;
 		long term;
 		int maxTerm;
+		double average = first+second;
 		do
 		{	maxTerm = IBIO.inputInt("Calculate up to which term of the Fibonacci sequence? ");
 			if(maxTerm < 0)
@@ -25,6 +26,7 @@ public class Fibonacci
 		{	for(int i = 2; i < maxTerm; i++)
 			{
 				term = first + second;
+				average = average + term;
 				if(maxTerm <= 20)
 				{	IBIO.out("; " + term);
 				}
@@ -33,8 +35,16 @@ public class Fibonacci
 			}
 		}
 		term = first + second;
-		IBIO.output(term);
-		
+		IBIO.output("; " + term);
+		average = average + term;
+		IBIO.output("Average of terms sum = " + (average/maxTerm) );
+		long t = term;
+		int digits = 0;
+		while( t > 0 )
+		{	t = t / 10;
+			digits++;
+		}
+		IBIO.output( "Digits:" + digits );
 	}
 }
 

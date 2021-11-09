@@ -5,43 +5,63 @@ public class Fibonacci2
 	public static void main (String[] args)
 	{
 		IBIO.output("Marcos Drien");
-		int first  = 0;
-		int second = 1;
-		int term = 0;
 		int maxTerm;
+		
 		do
-		{	maxTerm = IBIO.inputInt("Calculate up to which term of the Fibonacci sequence? ");
-			if(maxTerm < 0)
-			{	IBIO.output("ERROR-input must be >= 0!");
-			}
-		} while( maxTerm < 0 );
-		if( maxTerm <= 20 )
 		{
-			IBIO.out(first);
-			if( maxTerm >= 1 )
-			{	IBIO.out("; " + second + "; ");
-			}
-			if( maxTerm > 1 )
-			{	for(int i = 2; i <= maxTerm; i++)
-				{
-					term = first + second;
-					IBIO.out( term );
-					if( i < maxTerm )
-					{	IBIO.out("; ");
-					}
-					first = second;
-					second = term;
+			long first  = 0;
+			long second = 1;
+			long term = first + second;
+			double average = first + second + term;
+			do
+			{	maxTerm = IBIO.inputInt("Calculate up to which term of the Fibonacci sequence? ");
+				if(maxTerm < 0)
+				{	IBIO.output("ERROR-input must be >= 0!");
 				}
-			}
-		} else {
-			for(int i = 2; i <= maxTerm; i++)
+			} while( maxTerm < 0 );
+			if( maxTerm != 0 )
 			{
-				term = first + second;
-				first = second;
-				second = term;
+				if( maxTerm <= 20 )
+				{
+					//IBIO.out(first);
+					IBIO.out(first + "; " + second + "; ");
+					if( maxTerm > 1 )
+					{
+						for(int i = 2; i <= maxTerm; i++)
+						{
+							term = first + second;
+							IBIO.out( term );
+							average = average + term;
+							if( i < maxTerm )
+							{	IBIO.out("; ");
+							}
+							first = second;
+							second = term;
+						}
+					}
+				} else
+				{
+					for(int i = 2; i <= maxTerm; i++)
+					{
+						term = first + second;
+						average = average + term;
+						first = second;
+						second = term;
+					}
+					IBIO.output( term );
+					
+				}
+				IBIO.output("\nAverage: " + (average / maxTerm) );
+				long t = term;
+				int digits = 0;
+				while( t > 0 )
+				{	t = t / 10;
+					digits++;
+				}
+				IBIO.output( "Digits:" + digits );
 			}
-			IBIO.out( term );
-		}
+			
+		} while(maxTerm != 0);
 	}
 }
 
