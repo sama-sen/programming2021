@@ -6,11 +6,11 @@ public class NestedForLoops
 	public static void main (String[] args)
 	{
 		int n = 5;
-		int printk = 0;
-		int comparisons = 0;
 		Scanner in = new Scanner(System.in);
 		do
-		{	System.out.print(" N = ? : ");
+		{	int printk = 0;
+			int comparisons = 0;
+			System.out.print(" N = ? : ");
 			n = in.nextInt();
 			if(n == 0)
 			{	break; // exit do while loop
