@@ -21,7 +21,7 @@ public class DecToBinRec
         System.out.print("Enter a positive integer (base 10): ");
         int b10 = input.nextInt();
         
-        if(b10 < 0)
+        if( b10 < 0 )
         {	System.out.print("Negatives not allowed. Making the input positive.");
 			b10 = b10 * -1;
 		}
