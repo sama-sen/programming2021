@@ -1,10 +1,18 @@
 /*
  * Pr5_4.java
- * 
+ * Chapter 5, problem #4 [5.4]
  * More accurate calculation of Pi using sequence of fractions
+ *
  * Write a program that will add up the sequence up to
- * 100 terms. Output double the answer (3.1415926535897922)
- * output:								3.1415926535897922
+ *
+ *
+ * π       1   1×2   1×2×3   1×2×3×4
+ * - = 1 + - + --- + ----- + ------- + ...
+ * 2       3   3×5   3×5×7   3×5×7×9
+ *
+ * The sequence above is a much quicker way of calculating pi
+ * Write a program that will add up the sequence above to 100 terms.
+ * Output double the answer (3.1415926535897922)
  */
 
 
