@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import static java.lang.System.out;
 
 public class RecCircleTest
 {
@@ -56,7 +55,7 @@ public class RecCircleTest
 		else
 			maxRadius = scaleY / 2;
 			
-		out.print("Enter a radius (1-" + maxRadius + "): ");
+		System.out.print("Enter a radius (1-" + maxRadius + "): ");
 		Scanner in = new Scanner(System.in);
 		double r = in.nextDouble();
 		in.close();
