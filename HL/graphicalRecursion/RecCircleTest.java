@@ -23,7 +23,13 @@ public class RecCircleTest
 	public static void circlere(double radius) throws InterruptedException
 	// expanding circle
 	{
-		// YOUR MASTERPIECE CODE GOES HERE!
+		if(radius == 0)		// stop when radius reaches 0
+		{	return;
+		} else
+		{	circlere(radius-1); // call the method with a smaller radius
+		}
+		StdDraw.circle(middleX, middleY, radius); // draw circle in the middle of the screen
+		Thread.sleep(1000); // wait a second
 	}
 
 	/* Part 2: this recursive method draws
@@ -61,11 +67,11 @@ public class RecCircleTest
 		in.close();
 
 		// Expanding/growing concentric circles - uncomment the next 4 lines below to test
-		//StdDraw.setPenColor(StdDraw.BLUE);
-		//circlere( r );
+		StdDraw.setPenColor(StdDraw.BLUE);
+		circlere( r );
 		
-		//Thread.sleep(3000);
-		//StdDraw.clear();
+		Thread.sleep(3000);
+		StdDraw.clear();
 		
 		// Shrinking concentric circles
 		StdDraw.setPenColor(StdDraw.MAGENTA);
