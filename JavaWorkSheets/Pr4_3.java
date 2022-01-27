@@ -6,7 +6,7 @@ they are the same as the input number. If they are then use the break statement 
 both loops. Your output will be the numbers or state that it is impossible.
 */
 
-public class Pr43 // 4.3
+public class Pr4_3 // 4.3
 {
 	public static void main(String args[])
 	{
