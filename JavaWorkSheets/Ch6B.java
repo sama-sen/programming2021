@@ -41,6 +41,13 @@ public class Ch6B
 		{	System.out.print( name.charAt(i) + " " );
 		}
 		System.out.print(name.equals("Pepe Perez "));
+		System.out.println("\n\nProblem 6.3\n");
+		for(int i = num; i > 0; i--)
+		{	System.out.println( spaces(i) + stars(num) );
+		}
+		for(int i = 0; i <= num; i++)
+		{	System.out.println( spaces(i) + stars(num) );
+		}
 	}
 }
 

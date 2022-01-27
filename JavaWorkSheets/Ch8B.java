@@ -11,14 +11,19 @@ public class Ch8B
 	
 	public static void main( String args[])
 	{
-		for (int i = 1; i < 10; i++)
-		{	for (int j = 1; j < 10; j++)
+		int counter = 0;
+		IBIO.output( "i  j  I+J" );
+		for (int i = 1; i <= 10; i++)
+		{	for (int j = 1; j <= 10; j++)
 			{
 				if ( good(i,j) )
 				{	IBIO.output( i + " " + j + " " + (i+j) );
+					counter++;
 				}
 			}
 		}
+		System.out.println(counter);
+		
 	}
 	
 	public static boolean isPrime(int n)
