@@ -31,9 +31,14 @@ public class Stack
 	}
 	
 	// Classwork: write the pop method:
-	//public int pop()
+	public int pop()
 	{
-		
+		if( !isEmpty() )
+		{	int n = top.data;
+			top = top.next;
+			return n;
+		}
+		return 0;
 	}
 	
 }
