@@ -23,7 +23,7 @@ public class Node
 		next = null;
 	}
 
-/*
+
 	public static void main(String[] args)
 	{
 		Node test = new Node(7);
@@ -44,7 +44,7 @@ public class Node
 		System.out.println( test.next );
 		
 	}
-*/
+
 
 }
 
