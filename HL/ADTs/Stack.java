@@ -41,5 +41,20 @@ public class Stack
 		return 0;
 	}
 	
+	// complete the printStack() method as homework
+	public void printStack()
+	{
+		if(this.isEmpty())
+		{	System.out.println("Stack is empty.");
+			return;
+		}
+		Node temp = top;
+		System.out.println("Top");
+		
+		// your code goes here
+		
+		System.out.println("null");
+	}
+	
 }
 

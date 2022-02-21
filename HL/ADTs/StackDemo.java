@@ -21,6 +21,21 @@ public class StackDemo
 		} else {
 			System.out.println( s.pop() );
 		}
+		
+		Stack reverse = new Stack();
+		int n;
+		do {
+			n = IBIO.inputInt("Enter a number: ");
+			if(n != 666)
+			{	reverse.push(n);
+				reverse.printStack();
+			}
+		} while( n != 666 );
+		
+		while( !reverse.isEmpty() )
+		{	System.out.println( reverse.pop() );
+			reverse.printStack();
+		}
 	}
 }
 
