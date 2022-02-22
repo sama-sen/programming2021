@@ -1,21 +1,21 @@
 /*
  * Stack.java
- * 
+ *
  * Class to define the structure and behaviour of
  * a linked stack abstract data structure/type
- * 
+ *
  */
 
 
 public class Stack
 {
 	Node top;
-	
+
 	public boolean isEmpty()
 	{	// top == null is a boolean expression that will return TRUE or FALSE. This is an shortcut of if..else
 		return top == null;
 	}
-	
+
 	public void push(int n)
 	{
 		Node newNode = new Node(); // create a node to push
@@ -29,7 +29,7 @@ public class Stack
 			top = newNode;
 		}
 	}
-	
+
 	// Classwork: write the pop method:
 	public int pop()
 	{
@@ -40,8 +40,13 @@ public class Stack
 		}
 		return 0;
 	}
-	
-	// complete the printStack() method as homework
+
+	/*********************************************************************
+	*	HOMEWORK: complete the printStack() method in the Stack class      *
+	*	so that the code shows the contents of a stack, LIFO, but without  *
+	*	destroying/popping the stack contents.                             *
+	*********************************************************************/
+
 	public void printStack()
 	{
 		if(this.isEmpty())
@@ -50,11 +55,10 @@ public class Stack
 		}
 		Node temp = top;
 		System.out.println("Top");
-		
+
 		// your code goes here
-		
+
 		System.out.println("null");
 	}
-	
-}
 
+}

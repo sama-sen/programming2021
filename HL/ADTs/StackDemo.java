@@ -1,7 +1,7 @@
 
 public class StackDemo
 {
-	
+
 	public static void main (String[] args)
 	{
 		Stack s = new Stack();
@@ -11,7 +11,7 @@ public class StackDemo
 		System.out.println( s.top.data );
 		s.push(7);
 		System.out.println( s.top.data );
-		
+
 		System.out.println( s.pop() );
 		System.out.println( s.pop() );
 		System.out.println( s.pop() );
@@ -21,7 +21,11 @@ public class StackDemo
 		} else {
 			System.out.println( s.pop() );
 		}
-		
+		System.out.println( "\n\n" );
+
+		/* HOMEWORK: Implement the printStack() method in the Stack class
+		so that the code below works. */
+
 		Stack reverse = new Stack();
 		int n;
 		do {
@@ -31,11 +35,10 @@ public class StackDemo
 				reverse.printStack();
 			}
 		} while( n != 666 );
-		
+
 		while( !reverse.isEmpty() )
 		{	System.out.println( reverse.pop() );
 			reverse.printStack();
 		}
 	}
 }
-
