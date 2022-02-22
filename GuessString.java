@@ -18,7 +18,7 @@ public class GuessString
 	
 	public static void main (String[] args)
 	{
-		String guessMe = "a";
+		String guessMe = "v";
 		char[] letters = new char[26];
 		int i = 0;
 		for (char c = 'a'; c <= 'z'; c++)
@@ -35,6 +35,8 @@ public class GuessString
 			if( letters[n] == x )
 			{	System.out.println( " <<< " );
 				break;
+			} else {
+				System.out.println(  );
 			}
 		}
 		
