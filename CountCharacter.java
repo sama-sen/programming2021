@@ -7,7 +7,7 @@ public class CountCharacter {
 		char whichOne = 'a';
 		int counter = 0;
 		int len = word.length();
-		System.out.println("Counting " + whichOne + " from " + word);
+		System.out.print("Counting " + whichOne + " from " + word + " = ");
 		for(int i = 0; i < len; i++) {
 			if(word.charAt(i) == whichOne) {
 				counter++;
