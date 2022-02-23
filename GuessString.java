@@ -18,7 +18,7 @@ public class GuessString
 	
 	public static void main (String[] args)
 	{
-		String guessMe = "v";
+		String guessMe = "aardvark";
 		char[] letters = new char[26];
 		int i = 0;
 		for (char c = 'a'; c <= 'z'; c++)
@@ -27,19 +27,17 @@ public class GuessString
 			i++;
 		}
 		//printArray(letters);
-		
-		char x = guessMe.charAt(0);
-		for(int n = 0; n < letters.length; n++)
-		{
-			System.out.print( letters[n] );
-			if( letters[n] == x )
-			{	System.out.println( " <<< " );
-				break;
-			} else {
-				System.out.println(  );
+		for(int l = 0; l < guessMe.length(); l++)
+		{	char x = guessMe.charAt(l);
+			for(int n = 0; n < letters.length; n++)
+			{
+				//System.out.print( letters[n] );
+				if( letters[n] == x )
+				{	System.out.println( ">" + letters[n] );
+					break;
+				}
 			}
 		}
-		
 	}
 }
 
