@@ -10,7 +10,9 @@ public class ArrayDemo2 {
 	{
 		for(int index = 0; index < a.length; index++)
 		{
-			System.out.println(index + " : " + a[index]);
+			if(a[index] != null)
+			{	System.out.println(index + " : " + a[index]);
+			}
 		}
 	}
 	
@@ -18,9 +20,12 @@ public class ArrayDemo2 {
 	{
 		for(int index = 0; index < a.length; index++)
 		{
-			System.out.print( a[index] );
-			if( index < a.length-1 )
-			{	 System.out.print(", ");
+			if(a[index] != null)
+			{	
+				System.out.print( a[index] );
+				if( index < a.length-1 )
+				{	 System.out.print(", ");
+				}
 			}
 		}
 		System.out.println();
@@ -36,6 +41,9 @@ public class ArrayDemo2 {
 			array[i] = IBIO.input("enter a String ");
 		}
 		printArray(array);
+		String[] a2 = { "Joe", null, "Anne" };
+		printArray(a2);
+		listArray(a2);
 	}
 }
 
