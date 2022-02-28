@@ -1,12 +1,12 @@
 /*
  * ArrayDemo.java
- * Array of integers
+ * Array of Strings
  */
 
 
-public class ArrayDemo {
+public class ArrayDemo2 {
 	
-	public static void listArray(int[] a)
+	public static void listArray(String[] a)
 	{
 		for(int index = 0; index < a.length; index++)
 		{
@@ -14,7 +14,7 @@ public class ArrayDemo {
 		}
 	}
 	
-	public static void printArray(int[] a)
+	public static void printArray(String[] a)
 	{
 		for(int index = 0; index < a.length; index++)
 		{
@@ -27,14 +27,13 @@ public class ArrayDemo {
 	}
 	
 	public static void main (String[] args) {
-		
-		int[] array;
+		String[] array; // <= declaration only
 		int size = IBIO.inputInt("Enter array size = ");
-		array = new int[size];
+		array = new String[size]; // initialisation/instantiation
 		printArray(array);
 		for(int i = 0; i < array.length; i++)
 		{
-			array[i] = IBIO.inputInt("enter an int ");
+			array[i] = IBIO.input("enter a String ");
 		}
 		printArray(array);
 	}
