@@ -5,7 +5,7 @@
 
 public class ArrayDemo {
 	
-	public static void printArray(int[] a)
+	public static void listArray(int[] a)
 	{
 		for(int index = 0; index < a.length; index++)
 		{
@@ -13,8 +13,23 @@ public class ArrayDemo {
 		}
 	}
 	
+	public static void printArray(int[] a)
+	{
+		for(int index = 0; index < a.length; index++)
+		{
+			System.out.print( a[index] );
+			if( index < a.length-1 )
+			{	 System.out.print(", ");
+			}
+		}
+		System.out.println();
+	}
+	
 	public static void main (String[] args) {
-		int[] array = new int[5];
+		
+		int[] array;
+		int size = IBIO.inputInt("Enter array size = ");
+		array = new int[size];
 		printArray(array);
 		for(int i = 0; i < array.length; i++)
 		{
