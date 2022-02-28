@@ -1,6 +1,6 @@
 /*
  * Node.java
- * 
+ * data is an integer
  */
 
 
