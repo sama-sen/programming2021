@@ -26,6 +26,14 @@ public class ArrayDemo {
 		System.out.println();
 	}
 	
+	public static double average(int[] a)
+	{
+		double result = 0;
+		// your code goes here
+		return result;
+		
+	}
+	
 	public static void main (String[] args) {
 		
 		int[] array;
@@ -37,6 +45,7 @@ public class ArrayDemo {
 			array[i] = IBIO.inputInt("enter an int ");
 		}
 		printArray(array);
+		System.out.println( average(array) );
 	}
 }
 
