@@ -111,7 +111,7 @@ public class NamesListManager
 	public static boolean isFull()
 	{
 		return lastIndex == MAXSIZE;
-	/*	if (size == MAXSIZE)
+	/*	if (lastIndex == MAXSIZE)
 	 *		return true;
 	 *	else
 	 *		return false;

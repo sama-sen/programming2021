@@ -43,23 +43,25 @@ public class Queue
 	}
 
 	/*********************************************************************
-	*	HOMEWORK: complete the printStack() method in the Stack class      *
-	*	so that the code shows the contents of a stack, LIFO, but without  *
-	*	destroying/popping the stack contents.                             *
+	*	HOMEWORK: complete the printQueue() method in this class         *
+	*	so that the code shows the contents of a queue, FIFO, but without*
+	*	destroying the queue contents.                                   *
 	*********************************************************************/
 
-	public void printStack()
+	public void printQueue()
 	{
-		if(this.isEmpty())
-		{	System.out.println("Stack is empty.");
+		if( isEmpty() )
+		{	System.out.println("Queue is empty.");
 			return;
 		}
-		Node temp = top;
-		System.out.println("Top");
-
-		// your code goes here
-
-		System.out.println("null");
+		NodeString temp = head;
+		System.out.print("Head -> ");
+		while(temp != null)
+		{
+			System.out.print(temp.data + " <- ");
+			temp = temp.next;
+		}
+		System.out.println(" Tail");
 	}
 
 }

@@ -49,19 +49,19 @@ public class Stack
 
 	public void printStack()
 	{
-		if(isEmpty())
+		if( isEmpty() )
 		{	System.out.println("Stack is empty.");
 			return;
 		}
 		Node temp = top;
-		System.out.println("Top");
+		System.out.println("\nTop");
 		while(temp != null)
 		{
 			System.out.println(temp.data);
 			temp = temp.next;
 		}
 
-		System.out.println("null");
+		System.out.println("null\n");
 	}
 
 }

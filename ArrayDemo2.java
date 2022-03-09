@@ -4,7 +4,8 @@
  */
 
 
-public class ArrayDemo2 {
+public class ArrayDemo2
+{
 	
 	public static void listArray(String[] a)
 	{
@@ -44,11 +45,13 @@ public class ArrayDemo2 {
 		return true;
 	}
 	
-	public static void main (String[] args) {
+	public static void main (String[] args)
+	{
 	/*	String[] array; // <= declaration only
 		int size = IBIO.inputInt("Enter array size = ");
 		array = new String[size]; // initialisation/instantiation
 		printArray(array);
+		listArray(array);
 		for(int i = 0; i < array.length; i++)
 		{
 			array[i] = IBIO.input("enter a String ");
@@ -72,6 +75,7 @@ public class ArrayDemo2 {
 		String[] b3 = { "Pepe", "Jose", "Maria", "Ana" };
 		System.out.println(b2.equals(b3));
 		System.out.println(equal(b2, b3));
+	
 	}
 }
 

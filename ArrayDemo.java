@@ -29,8 +29,10 @@ public class ArrayDemo {
 	public static double average(int[] a)
 	{
 		double result = 0;
-		// your code goes here
-		return result;
+		for(int n : a)
+		{	result = result + n;
+		}
+		return result/a.length;
 		
 	}
 	
@@ -39,7 +41,7 @@ public class ArrayDemo {
 		int[] array;
 		int size = IBIO.inputInt("Enter array size = ");
 		array = new int[size];
-		printArray(array);
+		listArray(array);
 		for(int i = 0; i < array.length; i++)
 		{
 			array[i] = IBIO.inputInt("enter an int ");

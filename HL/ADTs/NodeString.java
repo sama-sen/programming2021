@@ -7,7 +7,7 @@
 public class NodeString
 {
 	String data;
-	Node next; // self-referential data structure
+	NodeString next; // self-referential data structure
 
 	public boolean hasNext()
 	{

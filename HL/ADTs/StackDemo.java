@@ -23,21 +23,18 @@ public class StackDemo
 		}
 		System.out.println( "\n\n" );
 
-		/* HOMEWORK: Implement the printStack() method in the Stack class
-		so that the code below works. */
-
 		Stack reverse = new Stack();
 		int n;
 		do {
-			n = IBIO.inputInt("Enter a number: ");
-			if(n != 666)
+			n = IBIO.inputInt("Enter a + number: ");
+			if(n > 0)
 			{	reverse.push(n);
 				reverse.printStack();
 			}
-		} while( n != 666 );
+		} while( n > 0 );
 
 		while( !reverse.isEmpty() )
-		{	System.out.println( reverse.pop() );
+		{	System.out.println( " >>> Popping: " + reverse.pop() );
 			reverse.printStack();
 		}
 	}
