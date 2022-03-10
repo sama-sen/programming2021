@@ -18,11 +18,14 @@ public class Chapter9
 		final int MAXSIDES = 6;		// HOW MANY SIDES OF THE DIE
 		//declare   instantiation
 		int[] rolls = new int[MAXROLLS]; // create the array
+		// Populate array with die rolls
 		for (int i = 0; i < rolls.length; i++) // also MAXROLLS may be used in place of num.length
 		{	
 			rolls[i] = random(MAXSIDES);
 		}
-		for (int i = 0; i < 101; i++) // traversal of array
+		
+		
+		for (int i = 0; i < rolls.length; i++) // traversal of array
 		{	IBIO.output("index: " + i + "    Value: " + rolls[i]);
 		}
 	}

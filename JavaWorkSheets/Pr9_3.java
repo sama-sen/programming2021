@@ -26,9 +26,9 @@ public class Pr9_3
 		final int MAXSIDES = 6;		// HOW MANY SIDES OF THE DIE
 		//declare     instantiation
 		int[] rolls = new int[MAXROLLS]; // create the array
+		// populate the array
 		for (int i = 0; i < rolls.length; i++) // also MAXROLLS may be used in place of num.length
-		{	
-			rolls[i] = random(MAXSIDES);
+		{	rolls[i] = random(MAXSIDES);
 		}
 		// printArray(rolls);
 		// Practice: turn lines 35 to 42 into a void method
