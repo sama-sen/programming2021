@@ -143,7 +143,11 @@ public class NamesListManager
 	public static int search(String[] a, String data)
 	{
 		// this method will return the index where the data (a String) is found, or -1 if not found
-		
+		for(int i = 0; i < lastIndex; i++)
+		{	if( a[i].equalsIgnoreCase(data) )
+			{	return i;
+			}
+		}
 		return -1;
 	}
 	
