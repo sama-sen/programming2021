@@ -108,10 +108,10 @@ public class NamesListManager
 	private final static int MAXSIZE = 10;
 	private static int lastIndex = 0;
 	
-	public static boolean isFull()
+	public static boolean isFull(String[] a)
 	{
-		return lastIndex == MAXSIZE;
-	/*	if (lastIndex == MAXSIZE)
+		return lastIndex == a.length;
+	/*	if (lastIndex == a.length)
 	 *		return true;
 	 *	else
 	 *		return false;
@@ -131,12 +131,19 @@ public class NamesListManager
 	public static void add(String[] a, String data)
 	{
 		// this method will add data (a String) at the end of the array (the first free index)
-		printArray(a);
+		if( !isFull(a) )
+		{	a[lastIndex] = data;
+			lastIndex++ ;
+			printArray(a);
+		} else {
+			System.out.println("Error. Array full.");
+		}
 	}
 	
 	public static int search(String[] a, String data)
 	{
 		// this method will return the index where the data (a String) is found, or -1 if not found
+		
 		return -1;
 	}
 	
@@ -153,7 +160,7 @@ public class NamesListManager
 	
 	public static void insert(String[] a, String data, int index)
 	{
-		if( isFull() == true )
+		if( isFull(a) == true )
 			System.out.println("Error - array full");
 		else {
 			lastIndex++;
