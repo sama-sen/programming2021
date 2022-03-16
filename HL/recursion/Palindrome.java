@@ -11,6 +11,13 @@ public class Palindrome
 	{
 		// Have we reached the middle of the array? If yes, it's a palindrome
 		// if the extremes are the same, keep checking!
+		if(endIndex - startIndex < 1)
+		{	return true;
+		}
+		if(array[startIndex] == array[endIndex])
+		{
+			return isPalindrome(array, startIndex+1, endIndex-1);
+		}
 		return false; // it's not a palindrome if this statement is reached.
 	}
 	
