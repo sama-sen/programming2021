@@ -131,13 +131,19 @@ public class NamesListManager
 	public static void add(String[] a, String data)
 	{
 		// this method will add data (a String) at the end of the array (the first free index)
-		
+		if( !isFull(a) )
+		{	a[lastIndex] = data;
+			lastIndex++;
+		} else {
+			System.out.println(data + " cannot be added. Array full.");
+		}
+		printArray(a);
 	}
 	
 	public static int search(String[] a, String data)
 	{
 		// this method will return the index where the data (a String) is found, or -1 if not found
-		
+		return -1;
 	}
 	
 	public static void remove(String[] a, String data)
