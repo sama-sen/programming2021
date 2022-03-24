@@ -121,6 +121,8 @@ public class NamesListManager
 	public static void printArray(String[] a)
 	{
 		System.out.print( "Start -->");
+		// i < a.length to display all array contents, even
+		// unused/unpopulated/discarded elements.
 		for(int i = 0; i < lastIndex; i++)
 		{
 			System.out.print( "  " + a[i]);
@@ -157,7 +159,11 @@ public class NamesListManager
 		if( indexToRemove == -1)
 		{	System.out.printf("%s not found.\n", data);
 		} else {
-			// write code that will copy/move up the contents of the array by one index to remove the element
+			for(int i = indexToRemove; i < lastIndex - 1; i++)
+			{
+				a[i] = a[i+1];
+			}
+			lastIndex--;
 			printArray(a);
 		}
 	}

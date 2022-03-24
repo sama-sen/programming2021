@@ -32,6 +32,15 @@ public class ArrayDemo2
 		System.out.println();
 	}
 	
+	public static String[] copyArray(String[] s)
+	{
+		String[] copy = new String[s.length];
+		for(int i = 0; i < s.length; i++)
+		{	copy[i] = s[i];
+		}
+		return copy;
+	}
+	
 	public static boolean equal(String[] a, String[] b)
 	{
 		if(a.length != b.length)
@@ -72,10 +81,13 @@ public class ArrayDemo2
 		System.out.println( h1.equals(h2) );
 		System.out.println( h1 == h2 );
 		String[] b2 = { "Pepe", "Jose", "Maria", "Ana" };
-		String[] b3 = { "Pepe", "Jose", "Maria", "Ana" };
-		System.out.println(b2.equals(b3));
-		System.out.println(equal(b2, b3));
-	
+		String[] b3 = b2;
+		String[] b4 = copyArray(b2);
+		System.out.println("b2.equals(b3) " + b2.equals(b3));
+		System.out.println("equal(b2, b3) " + equal(b2, b3));
+		System.out.println("b3.equals(b4) " + b3.equals(b4));
+		System.out.println("b2.equals(b4) " + b2.equals(b4));
+		System.out.println("equal(b2, b4) " + equal(b2, b4));
 	}
 }
 
