@@ -59,7 +59,8 @@ public class LinkedList
 	}
 	/* Homework for next lesson:
 	 * add a delete() method
-	 * write a main method to test adding 5 strings
+	 * add to the main method a test deleting 6 strings,
+	 * including one not in the list, and
 	 * print the list each time you add a string to it
 	 */
 	
