@@ -30,7 +30,7 @@ public class LinkedList
 	{
 		NodeString newNode = new NodeString(data);
 		newNode.next = null;
-		if( start == null )
+		if( isEmpty() )
 		{	
 			start = newNode;
 		} else {
@@ -42,6 +42,21 @@ public class LinkedList
 		}
 	}
 	
+	public void printList()
+	{
+		if( isEmpty() )
+		{	System.out.println("List empty");
+			return;
+		}
+		NodeString temp = start;
+		System.out.print("Start -> ");
+		while( temp.hasNext() )
+		{
+			System.out.print( temp.data + " <- ");
+			temp = temp.next;
+		}
+		System.out.print( " null ");
+	}
 	/* Homework for next lesson:
 	 * add a printList() method
 	 * write a main method to test adding 5 strings
