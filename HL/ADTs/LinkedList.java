@@ -55,10 +55,10 @@ public class LinkedList
 			System.out.print( temp.data + " <- ");
 			temp = temp.next;
 		}
-		System.out.print( " null ");
+		System.out.println( " NULL ");
 	}
 	/* Homework for next lesson:
-	 * add a printList() method
+	 * add a delete() method
 	 * write a main method to test adding 5 strings
 	 * print the list each time you add a string to it
 	 */
