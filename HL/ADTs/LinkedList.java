@@ -35,7 +35,7 @@ public class LinkedList
 			start = newNode;
 		} else {
 			NodeString temp = start;
-			while( temp.hasNext() )
+			while( temp.hasNext() ) // temp.next != null
 			{	temp = temp.next;
 			}
 			temp.next = newNode;
@@ -50,7 +50,7 @@ public class LinkedList
 		}
 		NodeString temp = start;
 		System.out.print("Start -> ");
-		while( temp.hasNext() )
+		while( temp != null )
 		{
 			System.out.print( temp.data + " <- ");
 			temp = temp.next;
