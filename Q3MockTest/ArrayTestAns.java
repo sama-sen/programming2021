@@ -94,6 +94,14 @@ public class ArrayTestAns
 		}
 		return mode;
 	}
+	
+	public static double formatDouble(double x, int decimals)
+	{
+		int factor = (int)Math.pow(10, decimals);
+		int number = (int)(x * factor);
+		double result = (double)number / factor;			
+		return result;
+	}
 	//------------------------------------------------------------------
 	//------------------------------------------------------------------
 
@@ -106,12 +114,18 @@ public class ArrayTestAns
 
 		System.out.println( "\nSingapore Rainfall Statistics" );
 		System.out.println( "Measurements    : " + size(rainfall) );
-		System.out.printf( "Minimum   (0.20): %.2f\n", min(rainfall) );
-		System.out.printf( "Maximum (765.90): %.2f\n", max(rainfall) );
-		System.out.printf( "Range   (765.70): %.2f\n", range(rainfall) );
-		System.out.printf( "Average (178.89): %.2f\n", average(rainfall) );
-		System.out.printf( "Mode    (127.20): %.2f\n", mode(rainfall) );
-		System.out.printf( "Median  (159.70): %.2f\n", median(rainfall) );
+		System.out.println( "Minimum   (0.20): " +
+			formatDouble(min(rainfall), 2) );
+		System.out.println( "Maximum (765.90): " +
+			formatDouble(max(rainfall), 2) );
+		System.out.println( "Range   (765.70): " +
+			formatDouble(range(rainfall), 2) );
+		System.out.println( "Average (178.89): " +
+			formatDouble(average(rainfall), 2) );
+		System.out.println( "Mode    (127.20): " +
+			formatDouble(mode(rainfall), 2) );
+		System.out.println( "Median  (159.70): " +
+			formatDouble(median(rainfall), 2) );
 
 		System.out.println( "\nSingapore Temperature Statistics" );
 		System.out.println( "Measurements   : " + size(temperature) );
