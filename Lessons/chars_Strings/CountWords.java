@@ -1,5 +1,5 @@
 
-public class Q3Test
+public class CountWords
 {
 	public static int mysterio(String s)
 	{
