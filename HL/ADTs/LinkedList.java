@@ -57,6 +57,63 @@ public class LinkedList
 		}
 		System.out.println( " NULL ");
 	}
+	
+	public void delete(String del)
+	{
+		boolean found = false;
+		NodeString current = start;
+		NodeString prev = new NodeString();
+		while(!found && current != null)
+		{
+			if(current.data.equalsIgnoreCase(del))
+			{	found = true;
+			} else {
+				prev = current;
+				current = current.next;
+			}
+		}
+		if(found && current == start)
+		{	start = start.next;
+			return;
+		}
+		if(found)
+		{	prev.next = current.next;
+		}
+		if(!found)
+		{	System.out.printf("%s was not found.\n", del);
+		}
+	}
+	
+	public void add(String s)
+	{
+		NodeString prev = new NodeString();
+		NodeString curr = start;
+		NodeString newNode = new NodeString(s);
+		if( start == null ) // this.isEmpty()
+		{	start = newNode;
+			return;
+		} else if(start.data.compareTo(s) < 0)
+		{	newNode.next = start;
+			start = newNode;
+			return;
+		} else if(start.data.compareTo(s) > 0)
+		{	start.next = newNode;
+			return;
+		} else {
+			prev = start;
+			curr = prev.next;
+			while( curr != null)
+			{	if(s.compareTo(prev.data) > 0 &&
+					s.compareTo(curr.data) < 0)
+				{	newNode.next = curr;
+					prev.next = newNode;
+				}
+				prev = prev.next;
+				curr = curr.next;
+			}
+		}
+	}
+	
 	/* Homework for next lesson:
 	 * add a delete() method
 	 * add to the main method a test deleting 6 strings,
