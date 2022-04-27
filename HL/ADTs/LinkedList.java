@@ -109,6 +109,34 @@ public class LinkedList
 	/* Homework for next lesson:
 	 * add an insertBefore(search, insert) method
 	 */
+	 
+	public void add(String s)
+	{
+		NodeString newNode = new NodeString(s);
+		if( start == null ) // this.isEmpty()
+		{	start = newNode;
+			return;
+		}
+		if(s.compareTo(start.data) < 0)
+		{	newNode.next = start;
+			start = newNode;
+			return;
+		}
+		NodeString current = start;
+		NodeString after = current.next;
+		while( after != null )
+		{	if(s.compareTo(current.data) > 0 && s.compareTo(after.data) < 0 )
+			{	newNode.next = after;
+				current.next = newNode;
+			}
+			current = current.next;
+			after   = after.next;
+		}
+		// we are at the end of the linked list
+		if(s.compareTo(current.data) > 0 && after == null)
+		{	current.next = newNode;
+		}
+	}
 	
 }
 

@@ -31,6 +31,10 @@ public class LinkedListDemo
 		* 
 		* special challenge --if you have time--
 		* write and test an insertBefore method!
+		* 
+		* Below we test the add method, which is an insert-in-place
+		* (similar to an insertion sort) algorithm to add items
+		* in their right place to build a linked list in ascending order.
 		*/
 		LinkedList sortedList = new LinkedList();
 		System.out.println( sortedList.isEmpty() );
@@ -40,8 +44,8 @@ public class LinkedListDemo
 		sortedList.add("Peter"); sortedList.printList();
 		sortedList.add("Bruce"); sortedList.printList();
 		sortedList.add("Jane"); sortedList.printList();
-		
-
+		sortedList.add("Zeke"); sortedList.printList();
+		sortedList.add("Ada"); sortedList.printList();
 	}
 }
 
