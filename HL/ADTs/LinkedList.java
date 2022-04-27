@@ -97,15 +97,12 @@ public class LinkedList
 			return;
 		}
 		NodeString current = start;
-		while( current.hasNext() )
-		{	NodeString after = current.next;
-			if( s.compareTo(current.data) > 0 && s.compareTo(after.data) < 0)
-			{	newNode.next = after;
-				current.next = newNode;
-			}
-			current = current.next;
+		NodeString after = current.next;
+		while( s.compareTo(current.data) > 0 && s.compareTo(after.data) < 0 && current.hasNext() )
+		{	current = current.next;
 		}
-		
+		newNode.next = current.next;
+		current.next = newNode;
 	}
 	
 	/* Homework for next lesson:
