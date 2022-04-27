@@ -99,7 +99,7 @@ public class LinkedList
 		NodeString current = start;
 		while( current.hasNext() )
 		{	NodeString after = current.next;
-			if( s.compareTo(current.data) > 0 )
+			if( s.compareTo(current.data) > 0 && s.compareTo(after.data) < 0)
 			{	newNode.next = after;
 				current.next = newNode;
 			}

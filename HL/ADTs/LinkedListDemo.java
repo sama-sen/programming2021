@@ -39,6 +39,7 @@ public class LinkedListDemo
 		sortedList.add("Peter"); sortedList.printList();
 		sortedList.add("Bruce"); sortedList.printList();
 		sortedList.add("Jane"); sortedList.printList();
+		
 
 	}
 }
