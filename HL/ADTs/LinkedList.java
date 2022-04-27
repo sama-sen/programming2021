@@ -104,32 +104,10 @@ public class LinkedList
 		return found;
 	}
 	
-	public void add(String s)
-	{
-		NodeString newNode = new NodeString(s);
-		if( start == null ) // this.isEmpty()
-		{	start = newNode;
-			return;
-		}
-		if(s.compareTo(start.data) < 0)
-		{	newNode.next = start;
-			start = newNode;
-			return;
-		}
-		NodeString current = start;
-		NodeString after = current.next;
-		while( s.compareTo(current.data) > 0 && s.compareTo(after.data) < 0 && current.hasNext() )
-		{	current = current.next;
-		}
-		newNode.next = current.next;
-		current.next = newNode;
-	}
+
 	
 	/* Homework for next lesson:
-	 * add a delete() method
-	 * add to the main method a test deleting 6 strings,
-	 * including one not in the list, and
-	 * print the list each time you add a string to it
+	 * add an insertBefore(search, insert) method
 	 */
 	
 }
