@@ -106,32 +106,23 @@ public class LinkedList
 	
 	public void add(String s)
 	{
-		NodeString prev = new NodeString();
-		NodeString curr = start;
 		NodeString newNode = new NodeString(s);
 		if( start == null ) // this.isEmpty()
 		{	start = newNode;
 			return;
-		} else if(start.data.compareTo(s) < 0)
+		}
+		if(s.compareTo(start.data) < 0)
 		{	newNode.next = start;
 			start = newNode;
 			return;
-		} else if(start.data.compareTo(s) > 0)
-		{	start.next = newNode;
-			return;
-		} else {
-			prev = start;
-			curr = prev.next;
-			while( curr != null)
-			{	if(s.compareTo(prev.data) > 0 &&
-					s.compareTo(curr.data) < 0)
-				{	newNode.next = curr;
-					prev.next = newNode;
-				}
-				prev = prev.next;
-				curr = curr.next;
-			}
 		}
+		NodeString current = start;
+		NodeString after = current.next;
+		while( s.compareTo(current.data) > 0 && s.compareTo(after.data) < 0 && current.hasNext() )
+		{	current = current.next;
+		}
+		newNode.next = current.next;
+		current.next = newNode;
 	}
 	
 	/* Homework for next lesson:

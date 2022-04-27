@@ -32,6 +32,16 @@ public class LinkedListDemo
 		* special challenge --if you have time--
 		* write and test an insertBefore method!
 		*/
+		LinkedList sortedList = new LinkedList();
+		System.out.println( sortedList.isEmpty() );
+		sortedList.add("Ollie"); sortedList.printList();
+		sortedList.add("Lisa"); sortedList.printList();
+		sortedList.add("Mary"); sortedList.printList();
+		sortedList.add("Peter"); sortedList.printList();
+		sortedList.add("Bruce"); sortedList.printList();
+		sortedList.add("Jane"); sortedList.printList();
+		
+
 	}
 }
 
