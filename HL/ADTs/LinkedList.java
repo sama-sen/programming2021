@@ -84,6 +84,26 @@ public class LinkedList
 		}
 	}
 	
+	public boolean insertAfter(String search, String insert)
+	{
+		boolean found = false;
+		NodeString newNode = new NodeString(insert);
+		if(!isEmpty())
+		{	NodeString current = start;
+			while( current != null)
+			{	if(current.data.equalsIgnoreCase(search))
+				{	found = true;
+					newNode.next = current.next;
+					current.next = newNode;
+					return found;
+				}
+				current = current.next;
+			}
+		}
+		append(insert);
+		return found;
+	}
+	
 	public void add(String s)
 	{
 		NodeString prev = new NodeString();

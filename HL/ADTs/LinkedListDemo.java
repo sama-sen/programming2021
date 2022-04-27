@@ -22,11 +22,12 @@ public class LinkedListDemo
 		list1.delete("Mary"); list1.printList();
 		list1.delete("Ollie"); list1.printList();
 		list1.delete("Jane"); list1.printList();
-		/* end of delete test cases
+		
 		list1.insertAfter("Bruce", "Diana"); list1.printList();
 		list1.insertAfter("Lisa", "Ada"); list1.printList();
 		list1.insertAfter("Peter", "Otto"); list1.printList();
-		* end of insertAfter test cases
+		list1.insertAfter("Kyle", "Nova"); list1.printList();
+		/* end of insertAfter test cases
 		* 
 		* special challenge --if you have time--
 		* write and test an insertBefore method!
