@@ -41,7 +41,7 @@ public class Sorting
 					int temp = a[j];
 					a[j] = a[j+1];
 					a[j+1] = temp;
-					printArray(a); // shows swaps in array
+					System.out.print("\t>>> "); printArray(a); // shows swaps in array
 				}
 			}
 		}
@@ -58,7 +58,7 @@ public class Sorting
 				{	int temp = a[j];
 					a[j] = a[j+1];
 					a[j+1] = temp;
-					printArray(a);
+					System.out.print("\t>>> "); printArray(a);
 				}
 			}
 		}
@@ -78,7 +78,7 @@ public class Sorting
 					a[j] = a[j+1];
 					a[j+1] = temp;
 					swapped = true;
-					printArray(a);
+					System.out.print("\t>>> "); printArray(a);
 				}
 			}
 		}
@@ -96,6 +96,52 @@ public class Sorting
 	public static void insertion(int[] a)
 	{
 		// your code goes here - for the alternative insertion sort
+	}
+
+	public static void insertionSort(int[] array)
+	{
+		int len = array.length;
+		for(int i = 1; i < array.length; i++)
+		{
+			int temp = array[i];
+			int j = i-1;
+			while(j >= 0 && array[j] > temp)
+			{
+				array[j+1] = array[j];
+				j--;
+			}
+			array[j+1] = temp;
+			System.out.print("\t>>> ");
+			printArray(array);
+		}
+		// return array; optional-used only if the signature
+		// is: public static int[] insertionSort(int[] a...)
+	}
+	
+	public static int linearSearch(int[] array, int key)
+	{
+		int location = -1;	// not found
+		for(int i = 0; i < array.length; i++)
+		{
+			if(key == array[i])
+			{
+				location = i;
+				break;
+			}
+		}
+		return location;
+	}
+
+	public static int binarySearch(int[] array, int key)
+	{
+		int location = -1;	// not found
+		int index = 0;		// index of element being checked
+		boolean found = false; // flag to continue or stop searching
+		int low = 0;		// index of lowest element to check
+		int high=array.length; // index of last element to check
+		
+		// your code here
+		return location;
 	}
 
 	// No need to modify the main method.
@@ -128,8 +174,27 @@ public class Sorting
 
 		System.out.println("\nInsertion sort");
 		array = clone(original);
-		//simpleInsertion( array );
+		insertionSort( array );
 		printArray(array);
 
+		System.out.print("Enter element to search for: ");
+		int key = input.nextInt();
+		System.out.println("Linear search");
+		int location = linearSearch(sorted, key);
+		if(location == -1)
+		{
+			System.out.println(key + " not found.");
+		} else {
+			System.out.println(key + " found @ index " + location);
+		}
+		
+		System.out.println("\nBinary search");
+		int index = binarySearch(selection, key);
+		if(index == -1)
+		{
+			System.out.println(key + " not found.");
+		} else {
+			System.out.println(key + " found @ index " + index);
+		}
 	}
 }
