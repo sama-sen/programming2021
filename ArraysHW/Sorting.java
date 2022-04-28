@@ -46,7 +46,7 @@ public class Sorting
 					System.out.print("\t>>> ");	printArray(a); // shows swaps in array
 				}
 			}
-			
+			System.out.print("\t>>> "); printArray(a); // shows swaps in array
 		}
 		System.out.println("Comparisons: " + c);
 	}
@@ -64,6 +64,7 @@ public class Sorting
 					System.out.print("\t>>> "); printArray(a);
 				}
 			}
+			
 		}
 		System.out.println("Comparisons: " + c);
 	}
