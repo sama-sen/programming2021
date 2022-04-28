@@ -9,6 +9,8 @@
  * 
  * Also check https://visualgo.net/en/sorting 
  */
+import java.util.Scanner;
+
 public class Sorting
 {
 	public static void printArray(int[] array)
@@ -44,6 +46,7 @@ public class Sorting
 					System.out.print("\t>>> "); printArray(a); // shows swaps in array
 				}
 			}
+			
 		}
 		System.out.println("Comparisons: " + c);
 	}
@@ -142,6 +145,7 @@ public class Sorting
 	// No need to modify the main method.
 	public static void main(String[] args)
 	{
+		Scanner input = new Scanner(System.in);
 		int[] original = { 7,9,6,8,1,3,5,2,4 };
 		int[] array = clone(original);
 		System.out.println("Original array");
@@ -168,7 +172,7 @@ public class Sorting
 		printArray(array);
 
 		System.out.println("\nInsertion sort");
-		array = clone(original);
+		int[] sorted = clone(original);
 		insertionSort( array );
 		printArray(array);
 
@@ -184,12 +188,12 @@ public class Sorting
 		}
 		
 		System.out.println("\nBinary search");
-		int index = binarySearch(selection, key);
+		/*int index = binarySearch(selection, key);
 		if(index == -1)
 		{
 			System.out.println(key + " not found.");
 		} else {
 			System.out.println(key + " found @ index " + index);
-		}
+		}*/
 	}
 }
