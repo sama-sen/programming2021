@@ -93,11 +93,6 @@ public class Sorting
 	// a couple of ways to visualise the insertion sort:
 	// https://youtu.be/OGzPmgsI-pQ
 	// https://youtu.be/JU767SDMDvA
-	public static void insertion(int[] a)
-	{
-		// your code goes here - for the alternative insertion sort
-	}
-
 	public static void insertionSort(int[] array)
 	{
 		int len = array.length;
