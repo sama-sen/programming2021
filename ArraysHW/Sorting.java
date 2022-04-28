@@ -43,7 +43,7 @@ public class Sorting
 					int temp = a[j];
 					a[j] = a[j+1];
 					a[j+1] = temp;
-					System.out.print("\t>>> "); printArray(a); // shows swaps in array
+					System.out.print("\t>>> ");	printArray(a); // shows swaps in array
 				}
 			}
 			
@@ -98,23 +98,21 @@ public class Sorting
 	// https://youtu.be/OGzPmgsI-pQ
 	// https://youtu.be/JU767SDMDvA
 	public static void insertionSort(int[] array)
-	{
+	{	int c = 0;
 		int len = array.length;
 		for(int i = 1; i < array.length; i++)
 		{
 			int temp = array[i];
 			int j = i-1;
 			while(j >= 0 && array[j] > temp)
-			{
+			{	c++;
 				array[j+1] = array[j];
 				j--;
 			}
 			array[j+1] = temp;
-			System.out.print("\t>>> ");
-			printArray(array);
+			System.out.print("\t>>> ");	printArray(array);
 		}
-		// return array; optional-used only if the signature
-		// is: public static int[] insertionSort(int[] a...)
+		System.out.println("Comparisons: " + c);
 	}
 	
 	public static int linearSearch(int[] array, int key)
@@ -158,11 +156,13 @@ public class Sorting
 		System.out.println();
 		
 		System.out.println("\nOptimised Bubble sort");
+		array = clone(original); // reset array to original positions to test next sorting algo.
 		betterBubble( array );
 		printArray(array);
 		System.out.println();
 		
-		System.out.println("\nEarly exit optimised Bubble sort");
+		System.out.println("\nEarly exit optimised Bubble sort"); 
+		array = clone(original);
 		bestBubble( array );
 		printArray(array);
 		System.out.println();
@@ -173,14 +173,13 @@ public class Sorting
 		printArray(array);
 
 		System.out.println("\nInsertion sort");
-		int[] sorted = clone(original);
 		insertionSort( array );
 		printArray(array);
 
 		System.out.print("Enter element to search for: ");
 		int key = input.nextInt();
 		System.out.println("Linear search");
-		int location = linearSearch(sorted, key);
+		int location = linearSearch(array, key);
 		if(location == -1)
 		{
 			System.out.println(key + " not found.");
@@ -189,12 +188,12 @@ public class Sorting
 		}
 		
 		System.out.println("\nBinary search");
-		/*int index = binarySearch(selection, key);
+		int index = binarySearch(array, key);
 		if(index == -1)
 		{
 			System.out.println(key + " not found.");
 		} else {
 			System.out.println(key + " found @ index " + index);
-		}*/
+		}
 	}
 }
