@@ -91,6 +91,7 @@ public class Sorting
 	public static void selection(int[] a)
 	{
 		// your code goes here - sort the array a using selection sort
+		
 	}
 
 	// a couple of ways to visualise the insertion sort:
