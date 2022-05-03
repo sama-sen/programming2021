@@ -1,6 +1,7 @@
 /*
  * StringDemo.java
- * 
+ * Just getting started with Strings and extracting characters from them
+ * with charAt()
  */
 
 
