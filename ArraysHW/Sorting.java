@@ -1,8 +1,4 @@
-/* Sorting algorithms formative assessment
- * 
- * Student Name: 
- * 
- * April/2021
+/* Sorting algorithms 
  * 
  * Please read sorting_algos_SL.pdf and convert the pseudocode algorithms
  * into Java methods
@@ -89,10 +85,27 @@ public class Sorting
 		System.out.println("Comparisons: " + c);
 	}
 
+	// https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm
 	public static void selection(int[] a)
 	{
-		// your code goes here - sort the array a using selection sort
-		
+		int min, temp;
+		int c = 0;
+		for ( int i = 0; i < a.length - 1; i++ )
+		{
+			min = i;   // initialize index of element to sort
+			for(int j = i + 1; j < a.length; j ++)   // locate smallest element in unsorted part of the array
+			{
+				c++;
+				if( a[ j ] < a[ min ] )
+				{	min = j;
+				}
+			}
+			temp = a[ min ];   //swap smallest found with element in position i
+			a[ min ] = a[ i ];
+			a[ i ] = temp;
+			System.out.print("\t>>> "); printArray(a);
+		}
+		System.out.println("Comparisons: " + c);
 	}
 
 	// a couple of ways to visualise the insertion sort:
@@ -117,28 +130,42 @@ public class Sorting
 	}
 	
 	public static int linearSearch(int[] array, int key)
-	{
+	{	int c = 0;
 		int location = -1;	// not found
 		for(int i = 0; i < array.length; i++)
 		{
+			c++;
 			if(key == array[i])
 			{
 				location = i;
 				break;
 			}
 		}
+		System.out.println("Comparisons: " + c);
 		return location;
 	}
 
+	// https://www.tutorialspoint.com/data_structures_algorithms/binary_search_algorithm.htm
 	public static int binarySearch(int[] array, int key)
 	{
+		int c = 0;
 		int location = -1;	// not found
 		int index = 0;		// index of element being checked
-		boolean found = false; // flag to continue or stop searching
 		int low = 0;		// index of lowest element to check
 		int high=array.length; // index of last element to check
-		
-		// your code here
+		while( low < high )
+		{	c++;
+			int mid = (low + high) / 2;
+			if( array[mid] == key )
+			{	location = mid;
+				break; // key found, exit while loop/stop searching
+			} else if( key < array[mid] )
+			{	high = mid - 1;
+			} else if( key > array[mid] ) // this could also be a plain else
+			{	low = mid + 1;
+			}
+		}
+		System.out.println("Comparisons: " + c);
 		return location;
 	}
 
@@ -177,9 +204,9 @@ public class Sorting
 		insertionSort( array );
 		printArray(array);
 
-		System.out.print("Enter element to search for: ");
+		System.out.print("\nSearching algorithms\nEnter element to search for: ");
 		int key = input.nextInt();
-		System.out.println("Linear search");
+		System.out.println("\nLinear search");
 		int location = linearSearch(array, key);
 		if(location == -1)
 		{
