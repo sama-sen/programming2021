@@ -27,6 +27,10 @@ public class LinkedListDemo
 		list1.insertAfter("Lisa", "Ada"); list1.printList();
 		list1.insertAfter("Peter", "Otto"); list1.printList();
 		list1.insertAfter("Kyle", "Nova"); list1.printList();
+		list1.insertBefore("Lisa", "Leia"); list1.printList();
+		list1.insertBefore("Otto", "Norman"); list1.printList();
+		list1.insertBefore("Nova", "Reynor"); list1.printList();
+		list1.insertBefore("Kyle", "Cartman"); list1.printList();
 		/* end of insertAfter test cases
 		* 
 		* special challenge --if you have time--

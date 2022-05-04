@@ -104,12 +104,38 @@ public class LinkedList
 		return found;
 	}
 	
-
+	public boolean insertBefore(String search, String insert)
+	{
+		boolean found = false;
+		NodeString newNode = new NodeString(insert);
+		if(!isEmpty())
+		{	if( search.equalsIgnoreCase(start.data) )
+			{	newNode.next = start;
+				start = newNode;
+				return true;
+			}
+			NodeString previous= start;
+			NodeString current = start.next;
+			while( current != null)
+			{	if(current.data.equalsIgnoreCase(search))
+				{	found = true;
+					newNode.next = current;
+					previous.next = newNode;
+					return found;
+				}
+				previous = previous.next;
+				current = current.next;
+			}
+		}
+		append(insert);
+		return found;
+	}
 	
 	/* Homework for next lesson:
 	 * add an insertBefore(search, insert) method
 	 */
-	 
+	
+	// insert s in-place (ascending order)
 	public void add(String s)
 	{
 		NodeString newNode = new NodeString(s);
