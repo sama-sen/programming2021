@@ -150,20 +150,21 @@ public class Sorting
 	{
 		int c = 0;
 		int location = -1;	// not found
-		int index = 0;		// index of element being checked
-		int low = 0;		// index of lowest element to check
-		int high=array.length; // index of last element to check
-		while( low < high )
+		int lower = 0;		// index of lowest element to check
+		int upper = array.length - 1; // index of last element to check
+		System.out.println("\tlower index: " + lower + " upper index: " + upper + " midpoint: "+ (lower+upper)/2 );
+		while( lower <= upper )
 		{	c++;
-			int mid = (low + high) / 2;
+			int mid = (lower + upper) / 2;
 			if( array[mid] == key )
 			{	location = mid;
 				break; // key found, exit while loop/stop searching
 			} else if( key < array[mid] )
-			{	high = mid - 1;
+			{	upper = mid - 1;
 			} else if( key > array[mid] ) // this could also be a plain else
-			{	low = mid + 1;
+			{	lower = mid + 1;
 			}
+			System.out.println("\tl: " + lower + " u: " + upper + " m: "+ mid);
 		}
 		System.out.println("Comparisons: " + c);
 		return location;
