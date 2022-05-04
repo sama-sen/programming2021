@@ -27,22 +27,23 @@ public class LinkedListDemo
 		list1.delete("Jane"); list1.printList();
 		
 		System.out.println("\nInsertions before and after");
-		System.out.println("list1.insertAfter(\"Bruce\", \"Diana\") : " +
+		System.out.println("list1.insertAfter(\"Bruce\", \"Diana\") -Insert Diana after Bruce-: " +
 							list1.insertAfter("Bruce", "Diana")); list1.printList();
 		list1.insertAfter("Lisa", "Ada"); list1.printList();
 		list1.insertAfter("Peter", "Otto"); list1.printList();
 		list1.insertAfter("Kyle", "Nova"); list1.printList();
+		System.out.println("list1.insertAfter(\"Eva\", \"Adan\") -insert Adan after Eva, but Eva isn't in the list (insertAfter returns false): " +	list1.insertAfter("Eva", "Adan")); list1.printList();
 		list1.insertBefore("Lisa", "Leia"); list1.printList();
 		list1.insertBefore("Otto", "Norman"); list1.printList();
 		list1.insertBefore("Nova", "Reynor"); list1.printList();
-		System.out.println("list1.insertBefore(\"Kyle\", \"Cartman\") : " +
-							list1.insertBefore("Kyle", "Cartman")); list1.printList();
+		System.out.println("list1.insertBefore(\"Kyle\", \"Cartman\") -insert Cartman before Kyle, but Kyle isn't in the list (insertBefore returns false): " +	list1.insertBefore("Kyle", "Cartman")); list1.printList();
 		/*
 		 * Below we test the add method, which is an insert-in-place
 		 * (similar to an insertion sort) algorithm to add items
 		 * in their right place to build a linked list in ascending order.
 		 */
 		System.out.println("\nAdd/Insert in-place (insertion sort-like add String to a linked list)");
+		System.out.println("Please refer to the code, lines 48 onwards");
 		LinkedList sortedList = new LinkedList();
 		System.out.println( sortedList.isEmpty() );
 		sortedList.add("Ollie"); sortedList.printList();
