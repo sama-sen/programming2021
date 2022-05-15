@@ -131,14 +131,13 @@ public class Q4PracticalTest
 
 	public static String sortedMode(String[] array)
 	{
-		String bSorted = "unsorted";
 		if( isSortedAsc(array) )
-		{	bSorted = "ascending";
+		{	return "ascending";
+		} else if( isSortedDesc(array) )
+		{	return "descending";
+		} else 
+		{	return "unsorted";
 		}
-		if( isSortedDesc(array) )
-		{	bSorted = "descending";
-		}
-		return bSorted;
 	}
 	
 	public static void main(String[] args)
@@ -173,7 +172,7 @@ public class Q4PracticalTest
 			int binary = binarySearch(b, searches[i]);
 			System.out.printf("Binary search for %s (%d): %d\n", searches[i], locationsB[i], binary);
 		}
-		System.out.println( "\nbinarySearch(original, \"chandal\") [-2 or 24] = " + binarySearch(s, "chandal") );
+		System.out.println( "\nbinarySearch(original, \"chandal\") [-2 or 24] = " + binarySearch(original, "chandal") );
 	}
 	
 }
