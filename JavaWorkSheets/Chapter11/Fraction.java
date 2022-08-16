@@ -17,6 +17,14 @@ public class Fraction
 		this.den = den;
 	}
 	// these constructors are overloaded
+	public int getNum()
+	{	return this.num;
+	}
+	
+	public void setNum(int num)
+	{
+		this.num = num;
+	}
 	
 
 
