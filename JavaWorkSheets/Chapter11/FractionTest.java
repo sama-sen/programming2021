@@ -1,8 +1,7 @@
-
 public class FractionTest
 {
 	
-	// main method for quick testing and demo purposes only
+	// Test class for quick testing and demo purposes only
 	public static void main(String[] args)
 	{
 		Fraction f = new Fraction();

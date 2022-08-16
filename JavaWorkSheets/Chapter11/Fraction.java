@@ -6,9 +6,11 @@
 
 public class Fraction
 {
-	private int num;
-	private int den;
+	// attibutes or instance variables/fields (data)
+	private int num;	// private = you can't touch this!
+	private int den;	// ...outside of the Fraction class.
 	
+	// empty constructor (no parameters/arguments)
 	public Fraction()
 	{
 		this.num = 0;
