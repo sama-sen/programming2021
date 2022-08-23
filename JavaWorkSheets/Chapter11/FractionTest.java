@@ -8,7 +8,7 @@ public class FractionTest
 		System.out.println( f );
 		f.setNum(3);
 		f.setDen(4);
-		Fraction g = new Fraction(1, 2);
+		Fraction g = Fraction.enter();
 		//System.out.println( f.num + "/" + f.den );
 		System.out.println( f );
 		System.out.println( g );
