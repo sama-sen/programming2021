@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Fraction
 {
-    // attibutes or instance variables/fields (data)
+    // attributes or instance variables/fields (data)
     private int num;    // private = you can't touch this!
     private int den;    // ...outside of the Fraction class.
 
@@ -62,17 +62,29 @@ public class Fraction
         return f;
     }
 
-    public Fraction add(Fraction f)
+    public void add(Fraction f)
     {
         int n = this.num * f.den;
         int d = this.den * f.num;
         int tn = n + d;
         int td = this.den * f.den;
-        Fraction result = new Fraction(tn, td);
-        result.simplify();
-        return result;
+        this.num = tn;
+        this.den = td;
+        this.simplify();
     }
 
+    public void add(Fraction f, Fraction g)
+    {
+        int n = f.num * g.den;
+        int d = f.den * g.num;
+        int tn = n + d;
+        int td = f.den * g.den;
+        this.setNum(tn);
+        this.setDen(td);
+        this.simplify();
+    }
+
+    /*
     public Fraction add(Fraction f, Fraction g)
     {
         int n = f.num * g.den;
@@ -84,24 +96,29 @@ public class Fraction
         return result;
     }
 
-/*    public void add(Fraction f, Fraction g)
+    public Fraction add(Fraction f)
     {
-        int n = f.num * g.den;
-        int d = f.den * g.num;
+        int n = this.num * f.den;
+        int d = this.den * f.num;
         int tn = n + d;
-        int td = f.den * g.den;
-        this.setNum(tn);
-        this.setDen(td);
-        this.simplify();
-    } */
+        int td = this.den * f.den;
+        Fraction result = new Fraction(tn, td);
+        result.simplify();
+        return result;
+    }
+    */
 
     // calculate the GCD to simplify a fraction
     private static int gcd(int n, int m)
-    {   if (n == m)
-        {   return n;
+    {
+        if (n == m)
+        {
+            return n;
         } else
-        {   while (n != m)
-            {   if (n < m)
+        {
+            while (n != m)
+            {
+                if (n < m)
                     m = m - n;
                 else
                     n = n - m;
@@ -119,7 +136,7 @@ public class Fraction
 
     public double toDecimal()
     {
-        return (double)this.num / this.den;
+        return (double) this.num / this.den;
     }
 
     public boolean equals(Fraction f)

@@ -13,11 +13,11 @@ public class FractionTest
 				"\t Denominator input =" + f.getDen() );
 		System.out.println( "f = " + f );
 		System.out.println( "g = " + g );
-		Fraction h = f.add(g);
+		//f.add(g); // here you add g to f, changing f
 		Fraction sum = new Fraction();
-		sum.add(f, g);
-		System.out.print(f + " + " + g + " = " + h + " = ");
-		System.out.println(h.toDecimal());
+		sum.add(f, g); // the sum of f+g gets stored into sum
+		System.out.print(f + " + " + g + " = " + sum + " = ");
+		System.out.println(sum.toDecimal());
 		System.out.println("sum.equals(h) = " + f.equals(g));
 		System.out.println("f.compareTo(g) = " + f.compareTo(g));
 	}
