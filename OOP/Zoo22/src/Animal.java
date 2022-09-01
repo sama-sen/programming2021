@@ -31,5 +31,9 @@ public class Animal
             " | year of birth: " + yearOfBirth;
     }
 
+    public void talk()
+    {
+        System.out.println("Animals don't talk!");
+    }
 
 }

@@ -44,4 +44,8 @@ public class Dog extends Animal
         return super.toString() +
                 " | ageInDogYears=" + ageInDogYears;
     }
+
+    public void talk()
+    {   System.out.println("Bow wow Guau guau");
+    }
 }

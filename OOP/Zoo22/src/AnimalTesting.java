@@ -11,6 +11,7 @@ public class AnimalTesting
         System.out.println(fido);
         System.out.println(fido.getName() + "\t" +
                 fido.getYearOfBirth());
+        fido.talk();
 
         Dog pluto = new Dog("Pluto", 2012, 20);
         pluto.setAgeInDogYears(40);
@@ -19,5 +20,6 @@ public class AnimalTesting
 
         Dog killer = new Dog("Cujo", 2018);
         System.out.println(killer);
+        killer.talk();
     }
 }
