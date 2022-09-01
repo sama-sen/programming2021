@@ -6,10 +6,9 @@ public class Animal
     public Animal() { }
 
     public Animal(String name, int yearOfBirth)
-    {   this.setName(name);
-        this.setYearOfBirth(yearOfBirth);
+    {   this.name = name;
+        this.yearOfBirth = yearOfBirth;
     }
-
 
     public String getName()
     {   return name;
