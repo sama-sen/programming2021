@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class AnimalTesting
 {
     public static void main(String[] args)
