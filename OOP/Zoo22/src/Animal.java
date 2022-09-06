@@ -32,8 +32,11 @@ public class Animal
     }
 
     public void talk()
-    {
-        System.out.println("Animals don't talk!");
+    {   System.out.println("Animals don't talk!");
+    }
+
+    public void eat()
+    {   System.out.println("Animal eating...");
     }
 
 }

@@ -48,4 +48,9 @@ public class Dog extends Animal
     public void talk()
     {   System.out.println("Bow wow Guau guau");
     }
+
+    public void eat()
+    {
+        System.out.println("Chomp chomp");
+    }
 }
