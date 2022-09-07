@@ -6,5 +6,6 @@ public class BSTTest
         bst.add("Adam"); bst.add("Barbie");
         bst.add("Zed"); bst.add("Norman");
         bst.inOrder();
+
     }
 }
