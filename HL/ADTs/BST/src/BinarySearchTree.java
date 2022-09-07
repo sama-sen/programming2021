@@ -14,7 +14,7 @@ public class BinarySearchTree
     //public BinarySearchTree() { }  // we don't want empty BSTs
     // bc we don't want to check for empty BSTs
 
-    public boolean isEmpty()
+    public boolean isEmpty() // just in case
     {   return root == null;
     }
 
@@ -29,6 +29,7 @@ public class BinarySearchTree
     public void add(String data)
     {   add(this.root, data);
     }
+
     public void add(Node node, String data)
     {
         if (data.compareToIgnoreCase(node.getData()) < 0)
@@ -51,9 +52,9 @@ public class BinarySearchTree
     }
 
     public void inOrder()
-    {
-        inOrder(this.root);
+    {   inOrder(this.root);
     }
+
     public void inOrder(Node root)
     {
         if(root.getLeft() != null)
