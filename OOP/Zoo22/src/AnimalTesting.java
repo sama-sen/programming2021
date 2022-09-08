@@ -2,9 +2,13 @@ public class AnimalTesting
 {
     public static void main(String[] args)
     {
+        Animal baby = new Animal();
+        System.out.println(baby);
+        baby.setName("Baba");
+        System.out.println(baby);
+        baby.eat();
         Animal fido = new Animal("Joe", 2020);
         System.out.println(fido); // toString testing
-        fido.setName("Fido");
         fido.setYearOfBirth(2019);
         System.out.println(fido);
         System.out.println(fido.getName() + "\t" +
